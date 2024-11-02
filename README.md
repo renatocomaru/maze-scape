@@ -26,16 +26,17 @@ O objetivo deste projeto é familiarizar-se com o processo de desenvolvimento de
 ## Instalação
 
 1. Clone este repositório para sua máquina local:
+
    ```bash
    git clone https://github.com/seu-usuario/maze-escape.git
    ```
 
-````
 2. Abra o projeto no Godot (versão 4.3 ou superior):
- - Abra o Godot.
- - Clique em **Importar Projeto**.
- - Navegue até a pasta onde o projeto foi clonado e selecione-a.
- - Clique em **Selecionar Pasta** para carregar o projeto.
+
+- Abra o Godot.
+- Clique em **Importar Projeto**.
+- Navegue até a pasta onde o projeto foi clonado e selecione-a.
+- Clique em **Selecionar Pasta** para carregar o projeto.
 
 3. Execute o projeto para começar a jogar.
 
@@ -61,7 +62,7 @@ maze-escape/
 ├── .gitignore        # Arquivos ignorados pelo Git
 ├── LICENSE           # Licença do projeto
 └── README.md         # Documentação do projeto
-````
+```
 
 ## 7. Contribuição
 
