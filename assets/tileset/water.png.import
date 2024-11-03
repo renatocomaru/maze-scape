@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ytkkqp2cqvbl"
-path="res://.godot/imported/Jewel1 Green_Animation 1_0.png-64284c1135a9cd7b0fa16a96c95f716f.ctex"
+uid="uid://cah7al5p3ebpy"
+path="res://.godot/imported/water.png-6b6615f1de11bbe67187cb38e0b237de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Jewel1_Green_Animation/Jewel1 Green_Animation 1_0.png"
-dest_files=["res://.godot/imported/Jewel1 Green_Animation 1_0.png-64284c1135a9cd7b0fa16a96c95f716f.ctex"]
+source_file="res://assets/tileset/water.png"
+dest_files=["res://.godot/imported/water.png-6b6615f1de11bbe67187cb38e0b237de.ctex"]
 
 [params]
 
