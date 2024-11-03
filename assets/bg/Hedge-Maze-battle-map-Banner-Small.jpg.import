@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbq1n0cphi46b"
-path="res://.godot/imported/jack2.png-72c778aae034363391e058e607e4160b.ctex"
+uid="uid://dui86tj40iby5"
+path="res://.godot/imported/Hedge-Maze-battle-map-Banner-Small.jpg-533e070e8a177da636ede48c03400eaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/jack2.png"
-dest_files=["res://.godot/imported/jack2.png-72c778aae034363391e058e607e4160b.ctex"]
+source_file="res://assets/bg/Hedge-Maze-battle-map-Banner-Small.jpg"
+dest_files=["res://.godot/imported/Hedge-Maze-battle-map-Banner-Small.jpg-533e070e8a177da636ede48c03400eaf.ctex"]
 
 [params]
 
