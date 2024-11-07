@@ -1,21 +1,16 @@
-extends Node2D
+extends CharacterBody2D
 
 # Velocidade do personagem
-var speed = 100
+const SPEED = 100.0
 
-# Chamada para o AnimatedSprite2D
+# Referência ao AnimatedSprite2D
 @onready var animated_sprite = $AnimatedSprite2D
 
 # Variável para manter a direção atual
-var current_direction = "down"  # Armazena apenas "down", "up", "left", ou "right"
+var current_direction = "down"  # Pode ser "down", "up", "left" ou "right"
 
-# Função chamada quando o nó estiver pronto
-func _ready() -> void:
-	print("Personagem pronto!")
-
-# Função que processa a cada frame
-func _process(delta: float) -> void:
-	var direction = Vector2()
+func _physics_process(delta: float) -> void:
+	var direction = Vector2.ZERO
 	var new_direction = ""
 
 	# Verifica as teclas de direção e define a nova direção
@@ -39,12 +34,9 @@ func _process(delta: float) -> void:
 		animated_sprite.play(new_direction)
 
 	# Se não houver movimento, reproduz a animação de "parado"
-	if direction == Vector2():  # Verifica se não há movimento
+	if direction == Vector2.ZERO:
 		animated_sprite.play("idle_" + current_direction)  # Reproduz a animação de "parado"
 
-	# Aplica o movimento
-	if direction != Vector2():
-		direction = direction.normalized()
-
-	# Aqui o delta continua a ser aplicado para suavidade de movimento
-	position += direction * speed * delta
+	# Calcula e aplica o movimento
+	self.velocity = direction.normalized() * SPEED
+	move_and_slide()
