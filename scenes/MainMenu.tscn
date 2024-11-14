@@ -1,0 +1,161 @@
+[gd_scene load_steps=14 format=3 uid="uid://ckc66q7j7a5l2"]
+
+[ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_kuv07"]
+[ext_resource type="Texture2D" uid="uid://suhvb2ifxmvl" path="res://assets/bg/exilebg.webp" id="2_utut5"]
+[ext_resource type="FontFile" uid="uid://txt64w3i3k38" path="res://fonts/arcadeclassic/ARCADECLASSIC.TTF" id="3_vrcy5"]
+[ext_resource type="Texture2D" uid="uid://bmu6bi2iteeum" path="res://assets/buttons/ui_concrete.png" id="4_siu4f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtql8"]
+atlas = ExtResource("4_siu4f")
+region = Rect2(15.9972, 15.9882, 127.993, 32.0056)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ds3gw"]
+texture = SubResource("AtlasTexture_mtql8")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdvbe"]
+atlas = ExtResource("4_siu4f")
+region = Rect2(16.0093, 64.0189, 128.008, 31.9882)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aiptn"]
+texture = SubResource("AtlasTexture_pdvbe")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmhe6"]
+atlas = ExtResource("4_siu4f")
+region = Rect2(15.9397, 16.4284, 128.09, 31.6035)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_or6lo"]
+texture = SubResource("AtlasTexture_jmhe6")
+
+[sub_resource type="Animation" id="Animation_etkrm"]
+resource_name = "start_game"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.96667, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Button:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.96667, 6.06667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hxh1j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Button:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_efcjl"]
+_data = {
+"RESET": SubResource("Animation_hxh1j"),
+"start_game": SubResource("Animation_etkrm")
+}
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_kuv07")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(432, 360)
+scale = Vector2(0.84375, 0.703125)
+texture = ExtResource("2_utut5")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 203.0
+offset_top = 131.0
+offset_right = 680.0
+offset_bottom = 214.0
+theme_override_colors/font_color = Color(0.645551, 2.56296e-06, 4.81307e-07, 1)
+theme_override_colors/font_shadow_color = Color(0.201816, 1.14311e-07, 7.21961e-08, 1)
+theme_override_fonts/font = ExtResource("3_vrcy5")
+theme_override_font_sizes/font_size = 72
+text = "EXILE: v1.0"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 866.0
+offset_bottom = 722.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 357.0
+offset_top = 423.0
+offset_right = 528.0
+offset_bottom = 493.0
+theme_override_colors/font_hover_color = Color(0.913725, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0.0588235, 1)
+theme_override_colors/font_color = Color(0.61339, 0.61339, 0.61339, 0.560784)
+theme_override_fonts/font = ExtResource("3_vrcy5")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxTexture_ds3gw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_aiptn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_or6lo")
+text = "Begin"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_efcjl")
+}
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
