@@ -5,7 +5,6 @@ const SPEED = 100.0
 var score = 0
 var visited_areas = []
 
-# Referência ao AnimatedSprite2D e ao ScoreLabel
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var score_label = $"../CanvasLayer/ScoreLabel"  # Ajuste o caminho se necessário
 

@@ -1,9 +1,11 @@
 extends Node
 
+@onready var op_theme = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimationPlayer.play("start_game")
+	op_theme.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

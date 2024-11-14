@@ -1,7 +1,35 @@
-[gd_scene load_steps=6 format=3 uid="uid://dit0df5ispvta"]
+[gd_scene load_steps=7 format=3 uid="uid://dit0df5ispvta"]
 
 [ext_resource type="Script" path="res://scripts/tutorial.gd" id="1_405au"]
 [ext_resource type="Texture2D" uid="uid://kpdti5rg06b3" path="res://assets/bg/tutorial.webp" id="1_k5uv7"]
+[ext_resource type="AudioStream" uid="uid://bk7iesf7xbdcy" path="res://sound/tutorial_theme.mp3" id="3_fy6ry"]
+
+[sub_resource type="Animation" id="Animation_eo2vk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(147, 739)]
+}
 
 [sub_resource type="Animation" id="Animation_e4deh"]
 resource_name = "tutorial"
@@ -29,33 +57,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(147, 739), Vector2(147, -604)]
-}
-
-[sub_resource type="Animation" id="Animation_eo2vk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/Control:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(147, 739)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gtsod"]
@@ -129,5 +130,9 @@ horizontal_alignment = 1
 libraries = {
 "": SubResource("AnimationLibrary_gtsod")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fy6ry")
+autoplay = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
