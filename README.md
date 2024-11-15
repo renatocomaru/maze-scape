@@ -2,6 +2,8 @@
 
 **Exile: v1.0** é um jogo simples onde o objetivo é guiar um personagem através de um labirinto alcançando checkpoints para vencer o jogo. Ao longo do caminho, o jogador deve encontrar as 4 cidades para fazer 4 pontos. Este projeto foi desenvolvido como parte de uma atividade avaliativa para o curso de Game Engine e Programação.
 
+![Imagem de capa](https://i.imgur.com/9Q1aaFX.jpeg)
+
 ## Sumário
 
 - [Objetivo](#objetivo)
