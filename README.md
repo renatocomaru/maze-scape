@@ -2,6 +2,12 @@
 
 **Exile: v1.0** é um jogo simples onde o objetivo é guiar um personagem através de um labirinto alcançando checkpoints para vencer o jogo. Ao longo do caminho, o jogador deve encontrar as 4 cidades para fazer 4 pontos e vencer o jogo. Este projeto foi desenvolvido como parte de uma atividade avaliativa para o curso de Game Engine e Programação.
 
+**Jogo desenvolvido pelos alunos:**
+- Renato Comarú Matos: 1292314966
+- Viviane da Costa Ferreira: 1262429956
+- Fabiano Figueredo Chaves: 324118586
+- Lívia Silva Lima: 824157723
+
 ![Imagem de capa](https://i.imgur.com/9Q1aaFX.jpeg)
 ![Imagem do Jogo](https://i.imgur.com/pqNVIj7.png)
 
