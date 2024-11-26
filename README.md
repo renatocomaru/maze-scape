@@ -1,6 +1,6 @@
 # Exile: v1.0
 
-**Exile: v1.0** é um jogo simples onde o objetivo é guiar um personagem através de um labirinto alcançando checkpoints para vencer o jogo. Ao longo do caminho, o jogador deve encontrar as 4 cidades para fazer 4 pontos. Este projeto foi desenvolvido como parte de uma atividade avaliativa para o curso de Game Engine e Programação.
+**Exile: v1.0** é um jogo simples onde o objetivo é guiar um personagem através de um labirinto alcançando checkpoints para vencer o jogo. Ao longo do caminho, o jogador deve encontrar as 4 cidades para fazer 4 pontos e vencer o jogo. Este projeto foi desenvolvido como parte de uma atividade avaliativa para o curso de Game Engine e Programação.
 
 ![Imagem de capa](https://i.imgur.com/9Q1aaFX.jpeg)
 ![Imagem do Jogo](https://i.imgur.com/pqNVIj7.png)
@@ -26,32 +26,35 @@ O objetivo deste projeto é familiarizar-se com o processo de desenvolvimento de
 
 ## Funcionalidades
 
-- **Labirinto desafiador**: O jogador precisa encontrar o caminho correto para chegar ao final.
+- **Labirinto**: O jogador precisa encontrar o caminho correto para chegar ao final.
 - **Checkpoints**: Cidades que você deve atravessar para vencer o jogo.
 - **Interface amigável**: Elementos visuais simples e intuitivos para facilitar a experiência do usuário.
+- **Originalidade**: Apesar de curadas as imagens e temas, o jogo acaba sendo original.
 
 ## Instalação
 
-1. Clone este repositório para sua máquina local:
+1. Escolha um diretório para criar um projeto novo no Godot.
+
+2. Clone este repositório para o local onde foi criado o projeto:
 
    ```bash
    git clone https://github.com/seu-usuario/maze-escape.git
    ```
 
-2. Abra o projeto no Godot (versão 4.3 ou superior):
+4. Abra o projeto no Godot (versão 4.3 ou superior):
+
+Com o projeto clonado, seu projeto Godot deve estar pronto para ser aberto.
 
 - Abra o Godot.
-- Clique em **Importar Projeto**.
-- Navegue até a pasta onde o projeto foi clonado e selecione-a.
-- Clique em **Selecionar Pasta** para carregar o projeto.
+- Clique no **Seu Projeto**.
 
-3. Execute o projeto para começar a jogar.
+5. Execute o projeto para começar a jogar.
 
 ## Como Jogar
 
-- Use as setas do teclado ou as teclas **WASD** para mover o personagem pelo labirinto.
-- Encontre as cidades para aumentar sua pontuação.
-- Encontre todas as cidades para completar o labirinto e vencer o jogo.
+- Use as setas do teclado para mover o personagem pelo labirinto.
+- Encontre as cidades.
+- Encontre seu lar.
 
 ## Tecnologias Utilizadas
 
@@ -67,8 +70,10 @@ O objetivo deste projeto é familiarizar-se com o processo de desenvolvimento de
 ```plaintext
 maze-escape/
 ├── assets/           # Arquivos gráficos (personagens, itens, ícones)
+├── fonts/           # Arquivosde fontes
 ├── scenes/           # Cenas do jogo (labirinto, personagem, itens)
 ├── scripts/          # Scripts GDScript para lógica do jogo
+├── sound/           # Arquivos sonoros (fx e temas)
 ├── .gitignore        # Arquivos ignorados pelo Git
 ├── LICENSE           # Licença do projeto
 └── README.md         # Documentação do projeto
