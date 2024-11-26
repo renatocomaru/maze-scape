@@ -248,6 +248,7 @@ theme_override_font_sizes/font_size = 65
 text = "Exile: v1.0"
 
 [node name="Class" type="Label" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 187.0
 offset_top = 289.0
 offset_right = 675.0
