@@ -1,6 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://m150o34a8ab6"]
+[gd_scene load_steps=18 format=3 uid="uid://m150o34a8ab6"]
 
 [ext_resource type="Texture2D" uid="uid://dlmyjwaiflmbb" path="res://assets/characters/human_base.png" id="1_g8egs"]
+[ext_resource type="AudioStream" uid="uid://4wk2wvaso833" path="res://sound/Footsep.mp3" id="2_kom1e"]
+[ext_resource type="AudioStream" uid="uid://4hswr8fgby48" path="res://sound/YouWin.mp3" id="3_gsh3e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_avea5"]
 atlas = ExtResource("1_g8egs")
@@ -145,3 +147,9 @@ zoom = Vector2(5, 5)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_2watj")
+
+[node name="FootstepPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_kom1e")
+
+[node name="WinSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gsh3e")

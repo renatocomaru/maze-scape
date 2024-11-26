@@ -1,15 +1,19 @@
 extends CharacterBody2D
 
 # Velocidade do personagem
-const SPEED = 100.0
+const SPEED = 60.0
 var score = 0
 var visited_areas = []
 
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var score_label = $"../CanvasLayer/ScoreLabel"  # Ajuste o caminho se necessário
+@onready var score_label = $"../CanvasLayer/ScoreLabel"
+@onready var footstep_player = $FootstepPlayer  # Para o som de passos
+@onready var score_player = $"../ScorePlayer"  # Para o som de pontuação
+@onready var win_sound_player = $WinSoundPlayer  # Para o som de vitória
 
 # Variável para manter a direção atual
 var current_direction = "down"  # Pode ser "down", "up", "left" ou "right"
+var is_moving = false  # Para verificar se o personagem está se movendo
 
 func _physics_process(_delta: float) -> void:
 	var direction = Vector2.ZERO
@@ -28,6 +32,16 @@ func _physics_process(_delta: float) -> void:
 	elif Input.is_action_pressed("ui_up"):
 		direction.y -= 1
 		new_direction = "up"
+
+	# Reproduz o som de passos se o jogador estiver se movendo
+	if direction != Vector2.ZERO:
+		if !footstep_player.playing:  # Toca apenas se não estiver tocando
+			footstep_player.play()
+		is_moving = true
+	else:
+		if footstep_player.playing:  # Para o som se o jogador não estiver se movendo
+			footstep_player.stop()
+		is_moving = false
 
 	# Se houver uma nova direção, reproduz a animação correspondente
 	if new_direction != "":
@@ -50,6 +64,10 @@ func increment_score(area_name: String):
 		score += 1
 		update_score_label()  # Atualiza a exibição da pontuação
 
+		# Toca o som de pontuação
+		if !score_player.playing:
+			score_player.play()
+
 		# Verifica se o jogador atingiu 4 pontos para mostrar a mensagem de vitória
 		if score == 4:
 			show_victory_message()
@@ -60,7 +78,14 @@ func update_score_label():
 
 # Função para mostrar mensagem de vitória
 func show_victory_message():
+	# Toca o som de vitória
+	if !win_sound_player.playing:
+		win_sound_player.play()
+
+	# Atualiza o texto de vitória
 	score_label.text = "Você não é mais um EXILADO!"
+
+	# Aguarda e muda para a cena final
 	await get_tree().create_timer(10).timeout
 	get_tree().change_scene_to_file("res://scenes/EndGame.tscn")
 

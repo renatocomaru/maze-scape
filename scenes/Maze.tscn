@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://cetk3cnea3t5y"]
+[gd_scene load_steps=21 format=4 uid="uid://cetk3cnea3t5y"]
 
 [ext_resource type="Script" path="res://scripts/maze.gd" id="1_0h8qv"]
 [ext_resource type="Texture2D" uid="uid://fppeaheiib4l" path="res://assets/tileset/tileset.png" id="2_cohvm"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/pointArea.gd" id="6_3ch5d"]
 [ext_resource type="FontFile" uid="uid://txt64w3i3k38" path="res://fonts/arcadeclassic/ARCADECLASSIC.TTF" id="7_gf84e"]
 [ext_resource type="AudioStream" uid="uid://cj4evv5mf7bg6" path="res://sound/main_theme.mp3" id="9_v8e6l"]
+[ext_resource type="AudioStream" uid="uid://q0c58bk8we5e" path="res://sound/Score.mp3" id="10_4di8b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqf18"]
 texture = ExtResource("2_cohvm")
@@ -1361,7 +1362,11 @@ offset_bottom = 23.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_v8e6l")
+volume_db = -10.0
 autoplay = true
+
+[node name="ScorePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_4di8b")
 
 [connection signal="body_entered" from="Local1" to="Player" method="_on_local_1_body_entered"]
 [connection signal="body_entered" from="Local2" to="Player" method="_on_local_2_body_entered"]
